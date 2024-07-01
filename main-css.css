@@ -13,8 +13,8 @@ body > * {
     color: #3b057d;
     font-family: "gill sans", sans-serif;
 }
-#generated-text {
-    padding: 50px 10px;
+.display-area {
+    padding: 10px;
     border: 2px solid #3b057d;
     margin: 20px 0;
     border-radius: 20px;
@@ -57,4 +57,8 @@ button:disabled {
     color: white;
     padding: 7px 15px;
     transition: 0.2s ease;
+}
+canvas {
+    width: 100%;
+    border-radius: 10px;
 }

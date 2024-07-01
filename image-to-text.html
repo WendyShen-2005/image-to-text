@@ -4,16 +4,23 @@
     <meta charset="UTF-8">
     <title>Image to Text Generator</title>
     <link rel="stylesheet" type="text/css" href="main-css.css">
+    <script type="module" src="main-js.js"></script>
 </head>
 <body>
+
     <h1>Image to Text Generator</h1>
-    <input type="file" accept="image/*"/>
+    <input id="image-input" type="file" accept="image/*" onchange="handleInputChange()"/>
 
     <br>
+    <div class="display-area">
+        <h3>Image to be processed:</h3>
+        <canvas id="canvas"></canvas>
+        <!-- <img id="image-placeholder" src="https://letsenhance.io/static/8f5e523ee6b2479e26ecc91b9c25261e/1015f/MainAfter.jpg"/> -->
+    </div>
+    <button id="generate-button" onclick="handleGenerateTextClick()">Generate Text</button>
 
-    <button id="generate-button" disabled>Generate Text</button>
-    <div id="generated-text"></div>
-    <button id="copy-button">Copy Text</button>
+    <div class="display-area" id="generated-text"></div>
+    <button id="copy-button" onclick="handleCopyClick()" disabled>Copy Text</button>
 
 </body>
 </html>
