@@ -60,5 +60,16 @@ button:disabled {
 }
 canvas {
     width: 100%;
+    height: 100%;
     border-radius: 10px;
+}
+#generated-text {
+    font-size: 10px;
+}
+#canvas {
+    height: 50px;
+}
+#copied {
+    margin-left: 10px;
+    display: none;
 }

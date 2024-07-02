@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <title>Image to Text Generator</title>
     <link rel="stylesheet" type="text/css" href="main-css.css">
-    <script type="module" src="main-js.js"></script>
+    <script src="main-js.js"></script>
 </head>
 <body>
 
@@ -13,14 +13,21 @@
 
     <br>
     <div class="display-area">
-        <h3>Image to be processed:</h3>
+        <h3 id="img-title">Please upload an image</h3>
         <canvas id="canvas"></canvas>
         <!-- <img id="image-placeholder" src="https://letsenhance.io/static/8f5e523ee6b2479e26ecc91b9c25261e/1015f/MainAfter.jpg"/> -->
     </div>
-    <button id="generate-button" onclick="handleGenerateTextClick()">Generate Text</button>
+    <label for="width-change"><b>Change the width of the text</b><br> (if the inputted width is less than the image pixel width, the width will be the pixel width)</label>
+    <input id="width-change" type="number" onchange="handleWidthChange()" value="50"/>
+    <br>
+    <button id="generate-button" onclick="handleGenerateTextClick()" disabled>Generate Text (current text width: 50)</button>
 
     <div class="display-area" id="generated-text"></div>
-    <button id="copy-button" onclick="handleCopyClick()" disabled>Copy Text</button>
+
+    <div style="position: relative;">
+        <button id="copy-button" onclick="handleCopyClick()" disabled>Copy Text</button>
+        <div id="copied">Copied!</div>
+    </div>
 
 </body>
 </html>
