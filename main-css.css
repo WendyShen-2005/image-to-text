@@ -2,12 +2,14 @@ html {
     height: 100%;
 }
 body {
+    max-width: 1500px;
     background: linear-gradient(180deg, rgba(0,255,252,1) 0%, rgba(228,0,255,1) 100%);
     background-repeat: no-repeat;
     display: flex;
     flex-direction: column;
     text-align: center;
     align-items: center;
+    margin: auto;
 }
 body > * {
     color: #3b057d;
@@ -72,4 +74,12 @@ canvas {
 #copied {
     margin-left: 10px;
     display: none;
+}
+#width-change {
+    background-color: rgba(0, 0, 0, 0.2);
+    color: white;
+    border: 1px solid #3b057d;
+    margin-top: 5px;
+    border-radius: 50px;
+    padding: 10px;
 }
